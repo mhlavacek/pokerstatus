@@ -13,20 +13,44 @@ body {
   position: relative;
 }
 
-.waitingForUs, .waitingForThem {
+.product {
+  padding: 10px;
+}
+
+.app-name {
+  display: inline-block;
+  width: 100px;
+  height: 35px;
+  vertical-align: bottom;
+}
+
+.status-column {
+  width: 50px;
+  padding: 10px;
+  display: inline-block;
+  text-align: center;
+}
+
+.chip {
+  cursor: pointer;
   display: inline-block;
   width: 50px;
   height: 50px;
+  border-radius: 25px;
+  border: 3px dashed #eee;
+  box-shadow: 2px 0px 4px 1px #888;
+
+  transition: all .25s;
 }
 
-.waitingForUs.visible {
-  background-color: red
+.chip--us {
+  background-color: red;
+
+  transform: translateX(0px) rotate(0deg);
 }
 
-.waitingForThem.visible {
-  background-color: blue
-}
+.chip--them {
+  background-color: green;
 
-.waitingForUs.visible, .waitingForThem.visible {
-  /*background: url(../../chip.jpg) no-repeat center center fixed;*/
+  transform: translateX(70px) rotate(90deg);
 }
