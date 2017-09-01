@@ -17,16 +17,13 @@ export class App extends React.Component<Props, State> {
   render() {
     return <div>
       <div style={{ width: '100px', display: 'inline-block' }}></div>
-      <div style={{ width: '50px', display: 'inline-block' }}>Us</div>
-      <div style={{ width: '50px', display: 'inline-block' }}>Them</div>
+      <div className='status-column'>Us</div>
+      <div className='status-column'>Them</div>
       {this.props.apps.map((app) => {
-        let waitingForUsVisible = app.status == 'WaitingOnUs' ? 'visible' : '';
-        let waitingForThemVisible = app.status == 'WaitingOnThem' ? 'visible': '';
-
-        return <div key={app.name}>
-          <div key='name' style={{ width: '100px', display: 'inline-block' }}>{app.name}</div>
-          <div key='waitingForUs' className={`waitingForUs ${waitingForUsVisible}`} onClick={() => this.toggleStatus(app.name)}></div>
-          <div key='waitingForThem' className={`waitingForThem ${waitingForThemVisible}`} onClick={() => this.toggleStatus(app.name)}></div>
+        var chipToggleClass = app.status == 'WaitingOnUs' ? 'chip--us' : 'chip--them';
+        return <div key={app.name} className='product'>
+          <div key='name' className={'app-name'}>{app.name}</div>
+          <div key='chip' className={`chip ${chipToggleClass}`} onClick={() => this.toggleStatus(app.name)}></div>
         </div>
       })}
     </div>
