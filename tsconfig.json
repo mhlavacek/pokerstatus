@@ -1,0 +1,15 @@
+{
+  "compilerOptions": {
+    "strictNullChecks": true,
+    "module": "commonjs",
+    "sourceMap": true,
+    "outDir": "./compiledts",
+    "target": "es6",
+    "baseUrl": ".",
+    "jsx": "react"
+  },
+  "exclude": [
+    "node_modules"
+  ],
+  "compileOnSave": false
+}

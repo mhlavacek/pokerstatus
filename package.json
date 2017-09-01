@@ -1,0 +1,20 @@
+{
+  "name": "pokerstatus",
+  "version": "1.0.0",
+  "description": "pokerstatus",
+  "dependencies": {
+    "@types/mocha": "^2.2.41",
+    "@types/react": "^15.0.38",
+    "awesome-typescript-loader": "^3.2.1",
+    "react": "^15.6.1",
+    "react-dom": "^15.6.1",
+    "react-test-renderer": "^15.6.1",
+    "typescript": "^2.4.2",
+    "webpack": "^3.3.0"
+  },
+  "scripts": {
+    "webpack": "webpack --config webpack.config.js --watch"
+  },
+  "author": "",
+  "license": "ISC"
+}
